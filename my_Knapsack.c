@@ -67,7 +67,7 @@ int main(){
     
     
     knapSack(weights,values,selected_bool);
-    printf("Selected items:");
+    printf("\nSelected items:");
     //int count=0;
     for(i=0; i<RESULT; i++){
         if(selected_bool[i]==1){
