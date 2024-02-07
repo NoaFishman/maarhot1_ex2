@@ -46,70 +46,37 @@ int main(){
     char items[RESULT][STR_LEN];
     int weights[RESULT], values[RESULT], selected_bool[RESULT]={0,0,0,0,0};
     int i;
-    //scanf("%s %s %s %s %s",&items[0], &items[1], &items[2], &items[3], &items[4]);
+    
     for (i = 0; i < RESULT; i++) {
-        printf("String %d: ", i+1);
-        fgets(items[i], STR_LEN, stdin);
-        strtok(items[i], "\n");
-        //scanf("%s", items[i]);
+         scanf("%s %d %d", items[i], &values[i], &weights[i]);
+        //printf("String %d: ", i+1);
+        // fgets(items[i], STR_LEN, stdin);
+        // strtok(items[i], " ");
+        // //scanf("%s", &items[i]);
+        // scanf("%d", &values[i]);
+        // scanf("%d", &weights[i]);
+        
     }
-    for (i = 0; i < RESULT; i++) {
-        scanf("%d", &values[i]);
-    }
-    //scanf("%d %d %d %d %d",&values[0], &values[1], &values[2], &values[3], &values[4]);
-    for (i = 0; i < RESULT; i++) {
-        scanf("%d", &weights[i]);
-    }
-    //scanf("%d %d %d %d %d",&weights[0], &weights[1], &weights[2], &weights[3], &weights[4]);
-    //selected_bool[RESULT]=
+    // for (i = 0; i < RESULT; i++) {
+    //     scanf("%d", &values[i]);
+    // }
+    
+    // for (i = 0; i < RESULT; i++) {
+    //     scanf("%d", &weights[i]);
+    // }
+    
+    
     knapSack(weights,values,selected_bool);
-    printf("Items that give the maximum profit: [");
-    int count=0;
-    for(i=RESULT-1; i>=0; i--){
+    printf("Selected items:");
+    //int count=0;
+    for(i=0; i<RESULT; i++){
         if(selected_bool[i]==1){
-            if(count>0){
-                printf(" ,");
-            }
-            printf("%s", items[i]);
-            count++;
             
-            
+            printf(" %s", items[i]);
         }
     }
-    printf("]\n");
-    // char* result[count];
-    // count=0;
-    // for(i=0; i<RESULT; i++){
-    //     if(selected_bool[i]==1){
-    //         result[count]= items[i];
-    //         count++;
-    //     }
-    // }
-    // printf("Items that give the maximum profit: [");
-    // for(i=0; i<count+1;i++){
-    //     printf("%s, " ,result[i]);
-    // }
-    // printf("]");
+    printf("\n");
     return 0;
 
-
-
-
-
-    
-
-
-    
-    // // Read strings from the user using scanf
-    // for (i = 0; i < MAX_NUM_STRINGS; i++) {
-    //     printf("String %d: ", i+1);
-    //     scanf("%s", strings[i]);
-    // }
-
-    // // Display the strings
-    // printf("\nEntered strings:\n");
-    // for (i = 0; i < MAX_NUM_STRINGS; i++) {
-    //     printf("%s\n", strings[i]);
-    // }
 
 }
