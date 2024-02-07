@@ -35,7 +35,7 @@ int knapSack(int weights[], int values[] , int selected_bool[]){
         }
     }
 
-     printf("Maximum profit: %d\n", maxProfit);
+     printf("Maximum profit: %d", maxProfit);
     return maxProfit;
 
 
@@ -49,22 +49,10 @@ int main(){
     
     for (i = 0; i < RESULT; i++) {
          scanf("%s %d %d", items[i], &values[i], &weights[i]);
-        //printf("String %d: ", i+1);
-        // fgets(items[i], STR_LEN, stdin);
-        // strtok(items[i], " ");
-        // //scanf("%s", &items[i]);
-        // scanf("%d", &values[i]);
-        // scanf("%d", &weights[i]);
+       
         
     }
-    // for (i = 0; i < RESULT; i++) {
-    //     scanf("%d", &values[i]);
-    // }
-    
-    // for (i = 0; i < RESULT; i++) {
-    //     scanf("%d", &weights[i]);
-    // }
-    
+   
     
     knapSack(weights,values,selected_bool);
     printf("\nSelected items:");
