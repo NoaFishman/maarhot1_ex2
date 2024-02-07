@@ -17,7 +17,7 @@ my_mat.o: my_mat.c my_mat.h
 	$(CC) $(FLAGS) -c -fPIC -o my_mat.o my_mat.c 
 my_graph: libmy_mat.so 
 
-my_Knapsack.o: my_Knapsack.c
+my_Knapsack.o: my_Knapsack.c 
 	$(CC) $(FLAGS) -c -fPIC -o my_Knapsack.o my_Knapsack.c 
 my_Knapsack: $(OBJECTS_KNAP) 
 	$(CC) $(FLAGS) -o my_Knapsack $(OBJECTS_KNAP) 
