@@ -75,7 +75,7 @@ int main(){
             printf(" %s", items[i]);
         }
     }
-    printf("\n");
+    //printf("\n");
     return 0;
 
 
